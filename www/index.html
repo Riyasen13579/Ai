@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOAH CYRUS — Personal Intelligence</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ══ SPLASH SCREEN ════════════════════════════════════════ -->
+    <div id="Splash">
+        <div class="splash-core">
+            <!-- Animated hexagon symbol -->
+            <div class="hex-wrap">
+                <div class="hex-ring hr1"></div>
+                <div class="hex-ring hr2"></div>
+                <div class="hex-ring hr3"></div>
+                <svg class="hex-svg" viewBox="0 0 120 120">
+                    <polygon class="hex-shape" points="60,8 104,32 104,88 60,112 16,88 16,32"/>
+                    <polygon class="hex-inner" points="60,24 92,42 92,78 60,96 28,78 28,42"/>
+                    <text x="60" y="67" class="hex-letter">N</text>
+                </svg>
+            </div>
+            <div class="splash-name">NOAH CYRUS</div>
+            <div class="splash-sub">Personal Intelligence System</div>
+            <div class="splash-dots">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ══ MAIN APP ══════════════════════════════════════════════ -->
+    <div id="App" hidden>
+
+        <!-- Top bar -->
+        <header id="TopBar">
+            <div class="tb-left">
+                <svg class="tb-hex" viewBox="0 0 40 40">
+                    <polygon class="hex-shape-sm" points="20,3 35,11 35,29 20,37 5,29 5,11"/>
+                    <text x="20" y="25" class="hex-letter-sm">N</text>
+                </svg>
+                <span class="tb-name">NOAH CYRUS</span>
+            </div>
+            <div class="tb-center" id="TopClock">00:00</div>
+            <div class="tb-right">
+                <button class="tb-btn" id="HistoryBtn" title="History">
+                    <i class="bi bi-clock-history"></i>
+                </button>
+                <button class="tb-btn" id="SettingsBtn" title="Settings">
+                    <i class="bi bi-sliders2"></i>
+                </button>
+                <div id="StatusDot" class="status-dot online" title="Server Online"></div>
+            </div>
+        </header>
+
+        <!-- ══ HOME VIEW ══════════════════════════════════════ -->
+        <div id="HomeView">
+
+            <!-- Central symbol -->
+            <div class="home-symbol">
+                <div class="sym-rings">
+                    <div class="sym-ring sr1"></div>
+                    <div class="sym-ring sr2"></div>
+                    <div class="sym-ring sr3"></div>
+                </div>
+                <svg class="sym-hex" viewBox="0 0 200 200">
+                    <!-- Outer hex -->
+                    <polygon class="sh-outer" points="100,10 172,52 172,148 100,190 28,148 28,52"/>
+                    <!-- Mid hex -->
+                    <polygon class="sh-mid" points="100,30 156,62 156,138 100,170 44,138 44,62"/>
+                    <!-- Inner hex -->
+                    <polygon class="sh-inner" points="100,52 140,74 140,126 100,148 60,126 60,74"/>
+                    <!-- Letter -->
+                    <text x="100" y="118" class="sh-letter">N</text>
+                    <!-- Orbit dots -->
+                    <circle class="orb-dot" cx="100" cy="10" r="5">
+                        <animateTransform attributeName="transform" type="rotate"
+                            from="0 100 100" to="360 100 100" dur="8s" repeatCount="indefinite"/>
+                    </circle>
+                    <circle class="orb-dot2" cx="172" cy="52" r="3.5">
+                        <animateTransform attributeName="transform" type="rotate"
+                            from="0 100 100" to="-360 100 100" dur="5s" repeatCount="indefinite"/>
+                    </circle>
+                    <circle class="orb-dot3" cx="28" cy="148" r="4">
+                        <animateTransform attributeName="transform" type="rotate"
+                            from="0 100 100" to="360 100 100" dur="12s" repeatCount="indefinite"/>
+                    </circle>
+                </svg>
+            </div>
+
+            <div class="home-greeting" id="HomeGreeting">Good morning</div>
+            <div class="home-tagline">What would you like to know?</div>
+
+            <!-- Search-style input bar -->
+            <div class="search-bar-wrap">
+                <div id="SearchBar">
+                    <i class="bi bi-search search-icon"></i>
+                    <textarea id="chatbox" rows="1"
+                        placeholder="Ask me anything..."></textarea>
+                    <div class="sb-right">
+                        <button id="SendBtn" class="sb-btn sb-send" hidden title="Send">
+                            <i class="bi bi-arrow-up"></i>
+                        </button>
+                        <button id="MicBtn" class="sb-btn sb-mic" title="Voice">
+                            <i class="bi bi-mic-fill"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Suggestion chips -->
+                <div class="chip-row" id="ChipRow">
+                    <button class="chip" data-q="What's the weather today?">🌤 Weather</button>
+                    <button class="chip" data-q="Tell me a joke">😄 Joke</button>
+                    <button class="chip" data-q="What is the time?">🕐 Time</button>
+                    <button class="chip" data-q="Open YouTube">▶ YouTube</button>
+                    <button class="chip" data-q="Latest news today">📰 News</button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ══ CHAT VIEW ═══════════════════════════════════════ -->
+        <div id="ChatView" hidden>
+            <div class="chat-scroll" id="ChatScroll"></div>
+
+            <!-- Bottom input -->
+            <div class="chat-input-wrap">
+                <div id="SearchBar2">
+                    <i class="bi bi-search search-icon"></i>
+                    <textarea id="chatbox2" rows="1"
+                        placeholder="Ask a follow-up..."></textarea>
+                    <div class="sb-right">
+                        <button id="SendBtn2" class="sb-btn sb-send" hidden>
+                            <i class="bi bi-arrow-up"></i>
+                        </button>
+                        <button id="MicBtn2" class="sb-btn sb-mic">
+                            <i class="bi bi-mic-fill"></i>
+                        </button>
+                        <button id="HomeBtn" class="sb-btn sb-home" title="Back to home">
+                            <i class="bi bi-house"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ══ VOICE OVERLAY ═══════════════════════════════════ -->
+        <div id="VoiceOverlay" hidden>
+            <div class="vo-inner">
+
+                <!-- Animated hexagon pulse -->
+                <div class="vo-hex-wrap">
+                    <div class="vo-ring vr1"></div>
+                    <div class="vo-ring vr2"></div>
+                    <div class="vo-ring vr3"></div>
+                    <svg class="vo-hex-svg" viewBox="0 0 120 120" id="VoHex">
+                        <polygon class="vo-hex-shape" points="60,8 104,32 104,88 60,112 16,88 16,32"/>
+                        <text x="60" y="70" class="vo-hex-letter">
+                            <i class="bi bi-mic-fill"></i>
+                        </text>
+                        <!-- mic icon as text workaround -->
+                        <text x="60" y="72" class="vo-mic-icon">🎙</text>
+                    </svg>
+                </div>
+
+                <!-- Live transcript -->
+                <div id="VoTranscript">Listening...</div>
+                <div id="VoHint">Speak clearly — auto-stops after 5 seconds of silence</div>
+
+                <!-- Wave bars (audio visualizer style) -->
+                <div class="vo-wave">
+                    <span></span><span></span><span></span>
+                    <span></span><span></span><span></span>
+                    <span></span><span></span><span></span>
+                </div>
+
+                <button id="StopVoiceBtn" class="vo-stop-btn">
+                    <i class="bi bi-stop-fill"></i> Stop Listening
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ══ HISTORY PANEL ════════════════════════════════════════ -->
+    <div class="offcanvas offcanvas-end hist-canvas"
+         data-bs-scroll="true" data-bs-backdrop="false"
+         tabindex="-1" id="HistoryPanel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Recent</h5>
+            <button type="button" class="btn-close btn-close-white"
+                    data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div id="HistoryList" class="offcanvas-body"></div>
+    </div>
+
+    <!-- ══ SETTINGS ══════════════════════════════════════════════ -->
+    <div id="SettingsOverlay"></div>
+    <div id="SettingsPanel">
+        <div class="sp-header">
+            <svg viewBox="0 0 40 40" width="28">
+                <polygon class="hex-shape-sm" points="20,3 35,11 35,29 20,37 5,29 5,11"/>
+                <text x="20" y="25" class="hex-letter-sm">N</text>
+            </svg>
+            <span>NOAH CYRUS Settings</span>
+        </div>
+        <label>Voice Language</label>
+        <select id="LangSelect">
+            <option value="en-IN" selected>English — India</option>
+            <option value="en-US">English — US</option>
+            <option value="en-GB">English — UK</option>
+            <option value="hi-IN">Hindi</option>
+        </select>
+        <label>Your Name</label>
+        <input type="text" id="UserName" value="Ma'am" placeholder="Your name">
+        <label>Assistant Voice</label>
+        <select id="VoiceSelect">
+            <option value="female">Female</option>
+            <option value="male">Male</option>
+        </select>
+        <div class="sp-footer">
+            <button class="sp-save" id="SaveSettings">Save & Close</button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="script.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

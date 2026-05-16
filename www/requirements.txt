@@ -1,0 +1,7 @@
+flask
+flask-cors
+pyjokes
+wolframalpha
+wikipedia
+requests
+gunicorn
