@@ -4,5 +4,8 @@ __pycache__/
 .env
 venv/
 .venv/
+myenv/
 *.bat
 *.ps1
+pyvenv.cfg
+fix_git.ps1

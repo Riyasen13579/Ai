@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: noah-cyrus
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    envVars:
+      - key: WEATHER_KEY
+        value: c82f080c005596504785007a3ce670cc
+      - key: WOLFRAM_ID
+        value: K9QWWH-P6Y42K9QYE
