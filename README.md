@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # AI Voice Assistant
 
 A simple voice assistant built with Python. It listens to your voice commands, recognizes speech, and performs tasks like opening websites or giving predefined responses.
@@ -21,7 +21,7 @@ Make sure you have Python 3.8 or above installed.
 
 Clone the repository:
 =======
-# 🎙️ AI Voice Assistant
+#  AI Voice Assistant
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-green)
@@ -32,17 +32,17 @@ A simple yet powerful voice assistant built with Python. It listens to your voic
 
 ---
 
-## ✨ Features
+##  Features
 
-- 🎤 **Voice Recognition** — Converts spoken commands to text using `SpeechRecognition`
-- 🔊 **Text-to-Speech** — Responds back with a natural voice using `pyttsx3`
-- 🌐 **Open Websites** — Launch URLs via voice command
-- 💬 **Predefined Responses** — Handles common queries with instant replies
-- ⚡ **Lightweight & Fast** — Minimal dependencies, runs on any Python 3.8+ environment
+-  **Voice Recognition** — Converts spoken commands to text using `SpeechRecognition`
+-  **Text-to-Speech** — Responds back with a natural voice using `pyttsx3`
+-  **Open Websites** — Launch URLs via voice command
+-  **Predefined Responses** — Handles common queries with instant replies
+-  **Lightweight & Fast** — Minimal dependencies, runs on any Python 3.8+ environment
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 | Library | Purpose |
 |---|---|
@@ -52,7 +52,7 @@ A simple yet powerful voice assistant built with Python. It listens to your voic
 
 ---
 
-## 📦 Installation
+##  Installation
 
 ### 1. Clone the repository
 >>>>>>> 78341f5e96cdbefd632b20717ec20e67dba8e9a6
@@ -98,7 +98,7 @@ pip install SpeechRecognition pyttsx3 pyaudio
 
 ---
 
-## 🚀 Usage
+## Usage
 >>>>>>> 78341f5e96cdbefd632b20717ec20e67dba8e9a6
 
 ```bash
@@ -131,7 +131,7 @@ The assistant will start listening. Try these voice commands:
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 >>>>>>> 78341f5e96cdbefd632b20717ec20e67dba8e9a6
 
 ```
@@ -166,7 +166,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 =======
 ---
 
-## ⚙️ Configuration
+##  Configuration
 
 You can customize the assistant's behaviour directly in `main.py`:
 
@@ -176,7 +176,7 @@ You can customize the assistant's behaviour directly in `main.py`:
 
 ---
 
-## 🐛 Troubleshooting
+##  Troubleshooting
 
 **Microphone not detected**
 - Make sure your microphone is connected and set as the default input device.
@@ -192,7 +192,7 @@ You can customize the assistant's behaviour directly in `main.py`:
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions are welcome! Here's how:
 
@@ -210,7 +210,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-## 🙏 Acknowledgements
+##  Acknowledgements
 
 - [SpeechRecognition](https://pypi.org/project/SpeechRecognition/) by Anthony Zhang
 - [pyttsx3](https://pypi.org/project/pyttsx3/) for offline TTS
